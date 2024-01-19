@@ -279,7 +279,6 @@ func ProcessEvents(el *EventLoop, flags int) int {
 	}
 	if -1 == el.maxfd || 0 != flags&KE_TimeEvents && 0 == flags&KE_DontWait {
 		var (
-			j          int
 			untilTimer int64 = -1
 		)
 		if 0 != flags&KE_TimeEvents && 0 == flags&KE_DontWait {
